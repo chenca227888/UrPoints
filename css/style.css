@@ -1,0 +1,102 @@
+div.agile_box {
+	border: 0;
+	border-radius: 3px;
+	color: white;
+	float: left;
+	font: 15px Helvetica;
+	margin-top: 2px;
+	padding: 1px 0 1px 0;
+	text-align: center;
+	width: 45px;
+}
+
+div.agile_estimation_box {
+	background-color: #4b75ce;
+}
+
+div.agile_spent_box {
+	background-color: red;
+	margin-right: 10px;
+}
+
+div.agile_remaining_box {
+	background-color: green;
+}
+
+div.agile_total_box {
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+.agile_hidden {
+	display: none !important;
+}
+
+div.agile_badge {
+	color: white;
+	padding-left: 4px;
+}
+
+div.agile_badge_estimate {
+	background: #4b75ce;
+	border: 1px solid #4b75ce;
+}
+
+div.agile_badge_spent {
+	background: red;
+	border: 1px solid red;
+}
+
+a.agile_close_button {
+	color: #444;
+	text-indent: 0 !important;
+}
+
+a.agile_help_button {
+	padding: 0 8px !important;
+}
+
+/*
+ * QUnit
+ */
+div#qunit-container {
+	left: 10px;
+	position: absolute;
+	top: 10px;
+	width: 500px;
+	z-index: 1000;
+}
+
+/*
+ * Help
+ */
+div#agile_help_container {
+	background: black;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	color: white;
+	left: 0;
+	padding: 24px;
+	padding-bottom:12px;
+	padding-top:12px;
+	position: absolute;
+	/*top: 9em;*/
+	top: 0;
+	overflow: scroll;
+	width: 40em;
+	z-index: 1001;
+}
+
+div#agile_help_container h1 {
+	margin-top: 10px;
+}
+
+span.agile_help_close {
+	float: right;
+	font-size: 10px;
+}
+
+div#agile_help_container img {
+	border-radius: 5px;
+}
