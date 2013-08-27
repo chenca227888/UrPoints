@@ -122,7 +122,7 @@ function update() {
 						cloneTitleTag.addClass('agile_clone_title');
 						originalTitleTag.after(cloneTitleTag);
 						var cleanTitle = Card.cleanTitle(title);
-						cloneTitleTag.contents().last()[0].textContent = cleanTitle;
+                                                cloneTitleTag.contents().last()[0].textContent = cleanTitle;
 					} else {
 						var cloneTitleTag = originalTitleSiblings.eq(0);
 						var cleanTitle = Card.cleanTitle(title);
@@ -132,7 +132,8 @@ function update() {
 					//
 					// Badges
 					//
-					var badges = $(card).children('div.badges');
+					//var badges = $(card).children('div.badges');
+                                        var badges = $(card).children('div.list-card-details').eq(0).children('div.badges');
 					// Spent
 					var spentBadge = badges.children('div.' + BadgeFactory.spentBadgeClass());	
 					if (spentBadge.size() == 0) {

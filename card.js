@@ -85,6 +85,7 @@ var Card = {
 		return Math.floor(Math.random()*11);
 	},
 	titleTag: function (card) {
-		return $(card).children('a.list-card-title').eq(0);
+		//return $(card).children('a.list-card-title').eq(0);
+		return $(card).children('div.list-card-details').eq(0).children('a.list-card-title').eq(0);
 	}
 }
