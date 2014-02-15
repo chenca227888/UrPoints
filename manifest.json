@@ -1,6 +1,6 @@
 {
 	"name" : "UrPoints",
-	"version" : "0.0.1",
+	"version" : "0.0.2",
 	"manifest_version" : 2,
 	"description" : "UrPoints is a open-source Chrome Extension that contains a few enhancements base on Trello 3000.",
 	"icons": {

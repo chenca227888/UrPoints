@@ -44,7 +44,6 @@ $(function(){
 		estimationTotal = InfoBoxFactory.makeTotalInfoBox(ESTIMATION);
 		remainingTotal = InfoBoxFactory.makeTotalInfoBox(REMAINING);
 
-
 		//
 		// Main Loop
 		//
@@ -63,7 +62,7 @@ function update() {
 	var globalTotalEstimation = 0;
 
 	List.all().each(function(i, el){
-			var h2 = $(el).children('h2'); 
+			var h2 = $(el).children('h2'); // list header name. eg. To Do
 
 			//
 			// Estimation box
@@ -134,13 +133,15 @@ function update() {
 					//
 					//var badges = $(card).children('div.badges');
                                         var badges = $(card).children('div.list-card-details').eq(0).children('div.badges');
+					
 					// Spent
 					var spentBadge = badges.children('div.' + BadgeFactory.spentBadgeClass());	
 					if (spentBadge.size() == 0) {
 						spentBadge = BadgeFactory.makeSpentBadge();
 						badges.append(spentBadge);
-					} 
+					}
 					spentBadge.contents().last()[0].textContent = spent;
+					
 					// Estimate
 					var estimateBadge = badges.children('div.' + BadgeFactory.estimateBadgeClass());
 					if (estimateBadge.size() == 0) {
@@ -177,10 +178,12 @@ function stringEndsWith(string, input) {
 
 var List = {
 	all : function() {
-		return $('div.list-title');
+//		return $('div.list-title');
+		return $('div.list-header');
 	},
 	cards : function(list) {
-		var cardsContainer = $(list).parent().siblings('div.list-card-area').children('div.list-cards').eq(0);
+//		var cardsContainer = $(list).parent().siblings('div.list-card-area').children('div.list-cards').eq(0);
+		var cardsContainer = $(list).parent().eq(0).children('div.list-cards').eq(0);
 		var cards = $(cardsContainer).children('div.list-card:not(.hide)');
 		return cards;
 	}
@@ -192,8 +195,9 @@ var InfoBoxManager = {
 	// but used inside here. Weird dependency.
 	//
 	update: function(){
-		var boardHeader = $('div#board-header');
+//		var boardHeader = $('div#board-header');
 		//var boardHeaderChildren = boardHeader.children();
+		var boardHeader = $('div.board-header');
 		boardHeader.append(estimationTotal);
 		boardHeader.append(spentTotal);
 		boardHeader.append(remainingTotal);
